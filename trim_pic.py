@@ -1,6 +1,5 @@
 from PIL import Image
 import os
-import time
 
 
 def trim1(path, imgName):
@@ -56,17 +55,18 @@ def trim1(path, imgName):
 def trim2(path, imgName):
     im = Image.open(os.path.join(path, imgName))
     width, height = im.size
+    counter = max(im.size)
     cropWidth = cropTop = cropBottom = -1
-    for i in range(width):
-        for j in range(height):
-            if cropWidth == -1:
+    for i in range(counter):
+        for j in range(counter):
+            if cropWidth == -1 and j < height and i < width:
                 if im.getpixel((i, j))[3] != 0 or im.getpixel(
                     (width - 1 - i, j))[3] != 0:
                     cropWidth = i
             if cropTop == -1:
                 if im.getpixel((j, i))[3] != 0:
                     cropTop = i
-            if cropBottom == -1:
+            if cropBottom == -1 and i < height and j < width:
                 if im.getpixel((j, height - 1 - i))[3] != 0:
                     cropBottom = i
             if cropWidth != -1 and cropTop != -1 and cropBottom != -1:
