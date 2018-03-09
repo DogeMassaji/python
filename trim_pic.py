@@ -63,7 +63,7 @@ def trim2(path, imgName):
                 if im.getpixel((i, j))[3] != 0 or im.getpixel(
                     (width - 1 - i, j))[3] != 0:
                     cropWidth = i
-            if cropTop == -1:
+            if cropTop == -1 and i < height and j < width:
                 if im.getpixel((j, i))[3] != 0:
                     cropTop = i
             if cropBottom == -1 and i < height and j < width:
