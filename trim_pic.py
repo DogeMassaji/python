@@ -1,9 +1,26 @@
 from PIL import Image
 import os
+import shutil
 
 
-def trim1(path, imgName):
-    im = Image.open(path + imgName)
+def main():
+    source_path = 'D:/temp/rename/'
+    determination_path = 'D:/temp/trim/'
+
+    delete_files(source_path, determination_path)
+    copy_files(source_path, determination_path)
+
+    imgNames = os.listdir(determination_path)
+    for imgName in imgNames:
+        if os.path.isdir(os.path.join(
+                determination_path,
+                imgName)) or os.path.splitext(imgName)[1] != '.png':
+            continue
+        trim2(determination_path, imgName)
+
+
+def trim1(determination_path, imgName):
+    im = Image.open(determination_path + imgName)
     width = im.size[0]
     height = im.size[1]
     maxLeft = width // 2 - 1
@@ -52,8 +69,8 @@ def trim1(path, imgName):
     region.save(imgName, 'PNG')
 
 
-def trim2(path, imgName):
-    im = Image.open(os.path.join(path, imgName))
+def trim2(determination_path, imgName):
+    im = Image.open(os.path.join(determination_path, imgName))
     width, height = im.size
     counter = max(im.size)
     cropWidth = cropTop = cropBottom = -1
@@ -74,14 +91,24 @@ def trim2(path, imgName):
 
     box = (cropWidth, cropTop, width - cropWidth, height - cropBottom)
     region = im.crop(box)
-    region.save(imgName, 'PNG')
+    region.save(os.path.join(determination_path, imgName), 'PNG')
+
+
+def copy_files(source_path, determination_path):
+    for fileName in os.listdir(source_path):
+        if os.path.isdir(os.path.join(source_path, fileName)):
+            continue
+        shutil.copyfile(
+            os.path.join(source_path, fileName),
+            os.path.join(determination_path, fileName))
+
+
+def delete_files(source_path, determination_path):
+    for fileName in os.listdir(determination_path):
+        if os.path.isdir(os.path.join(determination_path, fileName)):
+            continue
+        os.remove(os.path.join(determination_path, fileName))
 
 
 if __name__ == '__main__':
-    path = 'D:/temp/'
-    imgNames = os.listdir(path)
-    for imgName in imgNames:
-        if os.path.isdir(os.path.join(
-                path, imgName)) or os.path.splitext(imgName)[1] != '.png':
-            continue
-        trim2(path, imgName)
+    main()
