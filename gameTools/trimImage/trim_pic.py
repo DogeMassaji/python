@@ -4,8 +4,8 @@ import shutil
 
 
 def main():
-    source_path = 'D:/temp/rename/'
-    determination_path = 'D:/temp/trim/'
+    source_path = 'D:\\workspace\\python\\gameTools\\trimImage\\src'
+    determination_path = 'D:\\workspace\\python\\gameTools\\trimImage\\tgt'
 
     delete_files(source_path, determination_path)
     copy_files(source_path, determination_path)

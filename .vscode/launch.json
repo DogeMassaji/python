@@ -13,15 +13,13 @@
             "program": "${file}",
             "cwd": "${workspaceFolder}",
             "env": {},
-            "envFile": "${workspaceFolder}/.env",
-            "debugOptions": [
-                "RedirectOutput"
-            ]
+			"envFile": "${workspaceFolder}/.env",
+            "redirectOutput": true
         },
         {
             "name": "Python: Attach",
             "type": "python",
-            "request": "attach",
+			"request": "attach",
             "localRoot": "${workspaceFolder}",
             "remoteRoot": "${workspaceFolder}",
             "port": 3000,
@@ -52,7 +50,6 @@
             "console": "externalTerminal",
             "env": {},
             "envFile": "${workspaceFolder}/.env",
-            "debugOptions": []
         },
         {
             "name": "Python: Django",
@@ -69,10 +66,8 @@
             ],
             "env": {},
             "envFile": "${workspaceFolder}/.env",
-            "debugOptions": [
-                "RedirectOutput",
-                "DjangoDebugging"
-            ]
+			"redirectOutput": true,
+			"django": true
         },
         {
             "name": "Python: Flask (0.11.x or later)",

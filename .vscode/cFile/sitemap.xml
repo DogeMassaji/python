@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<form-validation>
+  <formset>
+    <form name="AForm">
+    <field property="BField" depends="bytemaxlength,illegalChar">
+    <msg name="bytemaxlength" key="MSG0001" />
+    <msg name="illegalChar" key="MSG0002" />
+    </form>
+   </formset>
+</form-validation>
+</urlset>

@@ -30,7 +30,7 @@ def copy_files():
 def rename_files():
     i = 0
     j = 1
-    front = 'hero_sword_'
+    front = 'player_sword_'
     end = '.png'
 
     for fileName in os.listdir(determination_path):
@@ -40,23 +40,37 @@ def rename_files():
         os.rename(
             os.path.join(determination_path, fileName),
             os.path.join(determination_path,
-                         (front + names[i] + '_' + str(j).zfill(2) + end)))
-        if j >= numbers[i]:
+                         (front + names_list[i]['name'] + '_' + str(j).zfill(2) + end)))
+        if j >= names_list[i]['num']:
             i += 1
             j = 1
             continue
         j += 1
 
 
-source_path = u'D:\\temp\\'
-determination_path = u'D:\\temp\\rename\\'
-names = [
-    'stand', 'run', 'block', 'counter_atk_pt_1', 'counter_atk_pt_2', 'jump',
-    'light_atk_in_air', 'heavy_atk_in_air', 'roll', 'sprint_atk',
-    'light_atk_1', 'combo_1', 'combo_2', 'heavy_atk', 'combo_3', 'skill_pt_1',
-    'skill_pt_2', 'skill_pt_3', 'suffered', 'hit_hard', 'catched', 'die'
+source_path = u'D:\\workspace\\python\\gameTools\\renamePng\\src'
+determination_path = u'D:\\workspace\\python\\gameTools\\renamePng\\tgt'
+names_list = [
+    {'name': 'idle', 'num': 4},
+    {'name': 'run', 'num': 6},
+    {'name': 'block', 'num': 1},
+    {'name': 'counter_atk_pt_1', 'num': 5},
+    {'name': 'counter_atk_pt_2', 'num': 6},
+    {'name': 'jump', 'num': 6},
+    {'name': 'light_atk_in_air', 'num': 3},
+    {'name': 'heavy_atk_in_air', 'num': 7},
+    {'name': 'roll', 'num': 6},
+    {'name': 'light_atk_1', 'num': 5},
+    {'name': 'light_atk_2', 'num': 4},
+    {'name': 'light_atk_3', 'num': 4},
+	{'name': 'heavy_atk_1', 'num': 5},
+    {'name': 'heavy_atk_2', 'num': 8},
+    {'name': 'skill', 'num': 4},
+    {'name': 'suffered', 'num': 1},
+    {'name': 'hit_hard', 'num': 1},
+    {'name': 'catched', 'num': 1},
+    {'name': 'die', 'num': 3}
 ]
-numbers = [4, 6, 1, 5, 5, 6, 3, 3, 6, 4, 5, 4, 4, 5, 8, 6, 3, 5, 1, 1, 1, 3]
 
 if __name__ == '__main__':
     main()

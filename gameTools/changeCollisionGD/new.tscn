@@ -1,0 +1,2019 @@
+[gd_scene load_steps=185 format=2]
+
+[ext_resource path="res://scripts/main/fightScene/characters/player/FightScene_Player.gd" type="Script" id=1]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_05.tres" type="Texture" id=2]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_06.tres" type="Texture" id=3]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_01.tres" type="Texture" id=4]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_02.tres" type="Texture" id=5]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_block_01.tres" type="Texture" id=6]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_catched_01.tres" type="Texture" id=7]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_1_01.tres" type="Texture" id=8]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_1_02.tres" type="Texture" id=9]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_1_03.tres" type="Texture" id=10]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_1_04.tres" type="Texture" id=11]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_2_01.tres" type="Texture" id=12]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_2_02.tres" type="Texture" id=13]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_2_03.tres" type="Texture" id=14]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_2_04.tres" type="Texture" id=15]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_01.tres" type="Texture" id=16]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_02.tres" type="Texture" id=17]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_03.tres" type="Texture" id=18]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_04.tres" type="Texture" id=19]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_05.tres" type="Texture" id=20]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_06.tres" type="Texture" id=21]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_07.tres" type="Texture" id=22]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_combo_3_08.tres" type="Texture" id=23]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_1_01.tres" type="Texture" id=24]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_1_02.tres" type="Texture" id=25]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_1_03.tres" type="Texture" id=26]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_1_04.tres" type="Texture" id=27]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_1_05.tres" type="Texture" id=28]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_2_01.tres" type="Texture" id=29]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_2_02.tres" type="Texture" id=30]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_2_03.tres" type="Texture" id=31]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_2_04.tres" type="Texture" id=32]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_counter_atk_pt_2_05.tres" type="Texture" id=33]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_die_01.tres" type="Texture" id=34]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_die_02.tres" type="Texture" id=35]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_die_03.tres" type="Texture" id=36]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_04.tres" type="Texture" id=37]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_01.tres" type="Texture" id=38]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_02.tres" type="Texture" id=39]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_03.tres" type="Texture" id=40]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_04.tres" type="Texture" id=41]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_05.tres" type="Texture" id=42]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_in_air_01.tres" type="Texture" id=43]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_in_air_02.tres" type="Texture" id=44]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_heavy_atk_in_air_03.tres" type="Texture" id=45]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_suffered_01.tres" type="Texture" id=46]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_hit_hard_01.tres" type="Texture" id=47]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_jump_03.tres" type="Texture" id=48]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_1_01.tres" type="Texture" id=49]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_1_02.tres" type="Texture" id=50]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_1_03.tres" type="Texture" id=51]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_1_04.tres" type="Texture" id=52]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_1_05.tres" type="Texture" id=53]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_in_air_01.tres" type="Texture" id=54]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_in_air_02.tres" type="Texture" id=55]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_light_atk_in_air_03.tres" type="Texture" id=56]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_01.tres" type="Texture" id=57]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_02.tres" type="Texture" id=58]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_03.tres" type="Texture" id=59]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_04.tres" type="Texture" id=60]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_05.tres" type="Texture" id=61]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_roll_06.tres" type="Texture" id=62]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_01.tres" type="Texture" id=63]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_02.tres" type="Texture" id=64]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_03.tres" type="Texture" id=65]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_04.tres" type="Texture" id=66]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_05.tres" type="Texture" id=67]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_run_06.tres" type="Texture" id=68]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_01.tres" type="Texture" id=69]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_02.tres" type="Texture" id=70]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_03.tres" type="Texture" id=71]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_04.tres" type="Texture" id=72]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_05.tres" type="Texture" id=73]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_1_06.tres" type="Texture" id=74]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_2_01.tres" type="Texture" id=75]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_2_02.tres" type="Texture" id=76]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_2_03.tres" type="Texture" id=77]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_3_01.tres" type="Texture" id=78]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_3_02.tres" type="Texture" id=79]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_3_03.tres" type="Texture" id=80]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_3_04.tres" type="Texture" id=81]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_skill_pt_3_05.tres" type="Texture" id=82]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_sprint_atk_01.tres" type="Texture" id=83]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_sprint_atk_02.tres" type="Texture" id=84]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_sprint_atk_03.tres" type="Texture" id=85]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_sprint_atk_04.tres" type="Texture" id=86]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_stand_01.tres" type="Texture" id=87]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_stand_02.tres" type="Texture" id=88]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_stand_03.tres" type="Texture" id=89]
+[ext_resource path="res://resources/texture/hero/heroWithSword/hero_sword.sprites/hero_sword_stand_04.tres" type="Texture" id=90]
+[ext_resource path="res://scripts/main/commonScene/AnimationPlayer.gd" type="Script" id=91]
+[ext_resource path="res://scripts/main/fightScene/characters/player/FightScene_Input.gd" type="Script" id=92]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )
+
+[sub_resource type="Animation" id=3]
+
+length = 0.08
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 1 ), SubResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="Animation" id=6]
+
+length = 0.16
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 4 ), SubResource( 5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=8]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="Animation" id=14]
+
+length = 0.6
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.12, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, 22 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="Animation" id=18]
+
+length = 0.68
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.16, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 40 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="Animation" id=25]
+
+length = 0.92
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.28, 0.4, 0.48, 0.52, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.24, 0.68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.24, 0.28, 0.4, 0.48, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=29]
+
+length = 0.8
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 25 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="Animation" id=34]
+
+length = 0.84
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.36, 0.48, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.12, 0.64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.12 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 0.36, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.48, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 26 ), Vector2( 0, 24 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+
+length = 0.24
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="Animation" id=37]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 36 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 14 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -54, 24, 0, 24, 54, -24, 54, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="Animation" id=41]
+
+length = 0.84
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.32, 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.32, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 16 ), Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=42]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=43]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )
+
+[sub_resource type="Animation" id=44]
+
+length = 0.4
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "heavyAtkInAir" ],
+"method": "_stop_anim"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 42 ), SubResource( 43 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, 12 ), Vector2( 0, 2 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -52, 24, 0, 24, 52, -24, 52, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -20, 24, 0, 24, 20, -24, 20, -24, 0 )
+
+[sub_resource type="Animation" id=47]
+
+length = 0.4
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 46 ), ExtResource( 47 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 45 ), SubResource( 46 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -14 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=49]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 48 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 48 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=51]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=53]
+
+length = 0.6
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.08, 0.32 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.12 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 25 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 12 ), Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, 10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="Animation" id=56]
+
+length = 0.52
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 54 ), SubResource( 55 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 16 ), Vector2( 0, -4 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=57]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=59]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="Animation" id=60]
+
+length = 0.84
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.36, 0.48, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.12, 0.64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.12 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.36, 0.48, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 2 ), Vector2( 0, 26 ), Vector2( 0, 24 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=61]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -30, 24, 0, 24, 30, -24, 30, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -38, 24, 0, 24, 38, -24, 38, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -30, 24, 0, 24, 30, -24, 30, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=65]
+
+length = 0.44
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.2, 0.28, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08, 0.2, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.08, 0.28, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 2 ), Vector2( 0, 0 ), Vector2( 0, 2 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=66]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=67]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=68]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=69]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="Animation" id=70]
+
+length = 0.72
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 0.36, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=71]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=72]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=73]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=74]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=75]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=76]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=77]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=78]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=79]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=80]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="Animation" id=81]
+
+length = 1.72
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.48, 0.64, 0.8, 0.96, 1.2, 1.32, 1.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.04, 1.48 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.48, 0.64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 30 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 1 ],
+"method": "_is_running_in_skill"
+}, {
+"args": [ 0 ],
+"method": "_is_running_in_skill"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:shape")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.04, 0.12, 0.16, 0.24, 0.48, 0.64, 0.8, 0.96, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Player_CollisionShape2D:position")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.32, 1.48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 26 ), Vector2( 0, 24 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=82]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=83]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=84]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=85]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )
+
+[sub_resource type="Animation" id=86]
+
+length = 0.76
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 30 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=87]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 12, 0, 12, 48, -12, 48, -12, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=88]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=89]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )
+
+[sub_resource type="Animation" id=90]
+
+length = 0.76
+loop = true
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 66 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=91]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -52, 24, 0, 24, 52, -24, 52, -24, 0 )
+
+[sub_resource type="Animation" id=92]
+
+length = 0.16
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 46 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 91 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Player_CollisionShape2D:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[node name="Player_Node" type="KinematicBody2D" index="0"]
+
+position = Vector2( 512, 512 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player_AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/afterDropping = SubResource( 3 )
+anims/beforeJumping = SubResource( 6 )
+anims/block = SubResource( 8 )
+anims/catched = SubResource( 9 )
+anims/combo1 = SubResource( 14 )
+anims/combo2 = SubResource( 18 )
+anims/combo3 = SubResource( 25 )
+anims/counterAtkPt1 = SubResource( 29 )
+anims/counterAtkPt2 = SubResource( 34 )
+anims/die = SubResource( 35 )
+anims/dropping = SubResource( 37 )
+anims/heavyAtk = SubResource( 41 )
+anims/heavyAtkInAir = SubResource( 44 )
+anims/hitHard = SubResource( 47 )
+anims/jumping = SubResource( 49 )
+anims/lightAtk = SubResource( 53 )
+anims/lightAtkInAir = SubResource( 56 )
+anims/pickUpAtk = SubResource( 60 )
+anims/roll = SubResource( 65 )
+anims/run = SubResource( 70 )
+anims/skill = SubResource( 81 )
+anims/sprintAtk = SubResource( 86 )
+anims/stand = SubResource( 90 )
+anims/suffered = SubResource( 92 )
+blend_times = [  ]
+script = ExtResource( 91 )
+
+[node name="Player_Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 87 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="Player_CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+shape = SubResource( 87 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Input_Node" type="Node" parent="." index="3"]
+
+script = ExtResource( 92 )
+
+[connection signal="animation_started" from="Player_AnimationPlayer" to="." method="_on_Player_AnimationPlayer_animation_started"]
+
+

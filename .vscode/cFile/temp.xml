@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE>
+
+<form-validation>
+    <formset>
+
+        <form name="AForm">
+            <field property="BField" depends="bytemaxlength,illegalChar">
+                <msg name="bytemaxlength" key="MSG0001" />
+                <msg name="illegalChar" key="MSG0002" />
+                <arg0 name="bytemaxlength" key="Name of goods / servise" resource="false" />
+                <arg1 name="bytemaxlength" key="Something" resource="false" />
+                <arg0 name="illegalChar" key="anything" resource="false" />
+            </field>
+            <field property="CField" depends="byteminlength">
+                <msg name="bytemaxlength" key="MSG0001" />
+                <msg name="illegalChar" key="MSG0002" />
+                <arg0 name="byteminlength" key="Name of goods / servise" resource="false" />
+                <arg1 name="byteminlength" key="Something" resource="false" />
+            </field>
+        </form>
+
+        <form name="DForm">
+            <field property="BField" depends="bytemaxlength,illegalChar">
+                <msg name="bytemaxlength" key="MSG0001" />
+                <msg name="illegalChar" key="MSG0002" />
+                <arg0 name="bytemaxlength" key="Name of goods / servise" resource="false" />
+                <arg1 name="bytemaxlength" key="Something" resource="false" />
+                <arg0 name="illegalChar" key="anything" resource="false" />
+            </field>
+            <field property="CField" depends="byteminlength">
+                <msg name="bytemaxlength" key="MSG0001" />
+                <msg name="illegalChar" key="MSG0002" />
+                <arg0 name="byteminlength" key="Name of goods / servise" resource="false" />
+                <arg1 name="byteminlength" key="Something" resource="false" />
+            </field>
+        </form>
+    </formset>
+</form-validation>

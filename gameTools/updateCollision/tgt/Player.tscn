@@ -1,0 +1,2126 @@
+[gd_scene load_steps=160 format=2]
+
+[ext_resource path="res://scripts/main/fightScene/characters/player/FightScene_Player.gd" type="Script" id=1]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_05.tres" type="Texture" id=2]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_06.tres" type="Texture" id=3]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_01.tres" type="Texture" id=4]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_02.tres" type="Texture" id=5]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_block_01.tres" type="Texture" id=6]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_catched_01.tres" type="Texture" id=7]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_1_01.tres" type="Texture" id=8]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_1_02.tres" type="Texture" id=9]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_1_03.tres" type="Texture" id=10]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_1_04.tres" type="Texture" id=11]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_2_01.tres" type="Texture" id=12]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_2_02.tres" type="Texture" id=13]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_2_03.tres" type="Texture" id=14]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_2_04.tres" type="Texture" id=15]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_01.tres" type="Texture" id=16]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_02.tres" type="Texture" id=17]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_03.tres" type="Texture" id=18]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_04.tres" type="Texture" id=19]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_05.tres" type="Texture" id=20]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_06.tres" type="Texture" id=21]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_07.tres" type="Texture" id=22]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_combo_3_08.tres" type="Texture" id=23]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_1_01.tres" type="Texture" id=24]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_1_02.tres" type="Texture" id=25]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_1_03.tres" type="Texture" id=26]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_1_04.tres" type="Texture" id=27]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_1_05.tres" type="Texture" id=28]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_01.tres" type="Texture" id=29]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_02.tres" type="Texture" id=30]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_03.tres" type="Texture" id=31]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_04.tres" type="Texture" id=32]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_05.tres" type="Texture" id=33]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_counter_atk_pt_2_06.tres" type="Texture" id=34]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_die_01.tres" type="Texture" id=35]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_die_02.tres" type="Texture" id=36]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_die_03.tres" type="Texture" id=37]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_04.tres" type="Texture" id=38]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_01.tres" type="Texture" id=39]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_02.tres" type="Texture" id=40]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_03.tres" type="Texture" id=41]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_04.tres" type="Texture" id=42]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_05.tres" type="Texture" id=43]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_in_air_01.tres" type="Texture" id=44]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_in_air_02.tres" type="Texture" id=45]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_heavy_atk_in_air_03.tres" type="Texture" id=46]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_suffered_01.tres" type="Texture" id=47]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_hit_hard_01.tres" type="Texture" id=48]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_jump_03.tres" type="Texture" id=49]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_01.tres" type="Texture" id=50]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_02.tres" type="Texture" id=51]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_03.tres" type="Texture" id=52]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_04.tres" type="Texture" id=53]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_05.tres" type="Texture" id=54]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_in_air_01.tres" type="Texture" id=55]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_in_air_02.tres" type="Texture" id=56]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_light_atk_in_air_03.tres" type="Texture" id=57]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_01.tres" type="Texture" id=58]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_02.tres" type="Texture" id=59]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_03.tres" type="Texture" id=60]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_04.tres" type="Texture" id=61]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_05.tres" type="Texture" id=62]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_roll_06.tres" type="Texture" id=63]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_01.tres" type="Texture" id=64]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_02.tres" type="Texture" id=65]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_03.tres" type="Texture" id=66]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_04.tres" type="Texture" id=67]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_05.tres" type="Texture" id=68]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_run_06.tres" type="Texture" id=69]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_skill_01.tres" type="Texture" id=70]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_skill_02.tres" type="Texture" id=71]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_skill_03.tres" type="Texture" id=72]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_skill_04.tres" type="Texture" id=73]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_stand_01.tres" type="Texture" id=74]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_stand_02.tres" type="Texture" id=75]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_stand_03.tres" type="Texture" id=76]
+[ext_resource path="res://resources/texture/player/playerWithSword/player_sword.sprites/player_sword_stand_04.tres" type="Texture" id=77]
+[ext_resource path="res://scripts/main/commonScene/AnimationPlayer.gd" type="Script" id=78]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -40, 24, 0, 24, 40, -24, 40, -24, 0 )	
+[sub_resource type="Animation" id=3]
+
+length = 0.08
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 1 ), SubResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -52, 28, -22, 48, -22, 8, 48, -22, 48, -22, -32 ), PoolVector2Array( 28, -32, 28, -2, 38, 8, 28, 38, -32, 38, -32, 18, -12, -42, 8, -42 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="Animation" id=6]
+
+length = 0.16
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 4 ), SubResource( 5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, -42, 28, -22, 28, 38, -22, 38, -92, -2, -82, -12, -32, 8, -12, -42 ), PoolVector2Array( 18, -42, 28, -22, 48, -22, 18, 38, -22, 48, -22, -32, -2, -52 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="Animation" id=8]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 28, -42, 28, -12, 48, -22, 48, -22, 68, -22, 58, -2, 28, 18, 28, 48, -22, 48, -22, -22, -12, -42 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -28, 24, 20, 24, 68, -24, 68, -24, 20 )	
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -26, 24, 22, 24, 70, -24, 70, -24, 22 )	
+[sub_resource type="Animation" id=14]
+
+length = 0.6
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.12, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -42, 28, -42, 38, -32, 38, -12, 28, 8, 18, 48, -32, 48, -52, 28, -12, -2, -12, -32 ), PoolVector2Array( 28, -32, 28, -12, 18, 48, -32, 48, -12, -42, 18, -42 ), PoolVector2Array( 28, -2, 18, 68, -32, 68, -12, -22, 8, -32, 28, -22 ), PoolVector2Array( 18, -22, 28, -12, 28, 8, 18, 28, 28, 68, -32, 68, -22, 18, -32, 8, -22, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 58, 18, -62, 38, -62, 68, -22, 58, 18, 48, 38 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=16]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=17]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="Animation" id=18]
+
+length = 0.68
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.16, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 40 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -52, 28, -32, 28, 48, -32, 48, -32, -12 ), PoolVector2Array( 38, -42, 38, -12, 18, 18, 28, 48, -42, 48, -12, -42 ), PoolVector2Array( 38, -42, 48, -22, 28, -2, 88, 8, 38, 18, 28, 38, -42, 38, -12, -22, 8, -42 ), PoolVector2Array( 28, -42, 38, -32, 28, 38, -42, 38, -22, -2, -52, -42 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.28 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 28, 38, 48, -32, 98, -22, 118, -2, 118, 8, 88, 28 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.28, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.28, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=21]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=22]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=23]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=24]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="Animation" id=25]
+
+length = 0.92
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.28, 0.4, 0.48, 0.52, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.24, 0.68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.24, 0.28, 0.4, 0.48, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.24, 0.28, 0.4, 0.48, 0.52, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -52, 28, -32, 28, 18, 38, 48, -22, 48, -32, -12, -22, -12 ), PoolVector2Array( 18, -52, 28, -32, 18, -2, 48, -2, -2, 48, -42, 48, -22, -42 ), PoolVector2Array( 18, -42, 38, 18, -2, 48, -42, -2, -22, -42 ), PoolVector2Array( 28, -42, 8, 38, -12, 48, -32, 48, -22, 18, -42, 8, -32, -22, -12, -52 ), PoolVector2Array( 28, -42, 38, -32, 38, -12, 18, 18, 38, 48, -42, 48, -12, -42 ), PoolVector2Array( 38, -42, 48, -22, 28, -2, 108, 8, 38, 18, 28, 38, -42, 38, -32, 8, -12, -22, 8, -42 ), PoolVector2Array( 28, -42, 38, -32, 38, -22, 18, 18, 28, 38, -42, 38, -22, -2, -52, -42 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.52 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 28, 38, 48, -32, 98, -22, 118, -2, 118, 8, 88, 28 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.52, 0.68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.52, 0.68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=27]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=28]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="Animation" id=29]
+
+length = 0.8
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 25 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, -42, 28, -22, 58, -22, 18, 48, -22, 48, -32, -12, -22, -42 ), PoolVector2Array( 28, -42, 28, 8, 68, 18, 28, 48, -32, 48, -22, -12, -22, -32, -12, -42 ), PoolVector2Array( 38, -42, 38, -12, 88, 8, 88, 18, 28, 38, -42, 38, -2, -42 ), PoolVector2Array( 38, -42, 38, -2, 78, 18, 18, 48, -42, 48, -12, -32, -2, -42 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.28 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 18, 48, -12, 88, 8, 88, 18 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.28, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.28, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=31]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=32]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=33]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -22, 24, 26, 24, 74, -22, 74, -22, 26 )	
+[sub_resource type="ConvexPolygonShape2D" id=34]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -24, 24, 24, 24, 72, -24, 72, -24, 24 )	
+[sub_resource type="Animation" id=35]
+
+length = 1.0
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.64, 0.76 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.16, 0.76 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.16 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.16, 0.4, 0.64, 0.76 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 28, -42, 18, 8, 48, 8, 48, 18, 8, 38, -32, 48, -32, 18, -22, -42, -2, -52 ), PoolVector2Array( 28, -42, 28, 8, 68, 8, 68, 18, 18, 48, -42, 48, -12, -42 ), PoolVector2Array( 28, -42, 28, -2, 108, -2, 108, 8, 18, 38, -52, 38, -32, 18, -32, -22, -2, -42 ), PoolVector2Array( 28, -42, 28, -12, 18, 38, -22, 38, -32, 18, -22, -22, -2, -42 ), PoolVector2Array( 28, -42, 28, 48, -22, 48, -62, 38, -22, -22, -12, -42, 8, -52 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 58, -2, -72, 38, -62, 88, -12, 88, 18, 78, 38 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=36]
+
+length = 0.24
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -36, 24, 14, 0, 64, -24, 14 )
+
+[sub_resource type="Animation" id=38]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 38 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -32, 28, -12, 38, 18, 18, 58, -22, 58, -42, 8, -42, -22 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -32, 24, 16, 24, 64, -24, 64, -24, 16 )	
+[sub_resource type="ConvexPolygonShape2D" id=40]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=41]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -52, 24, 0, 24, 52, -24, 52, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=42]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -22, 24, 20, 24, 62, -22, 62, -22, 20 )	
+[sub_resource type="ConvexPolygonShape2D" id=43]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -54, 24, -6, 24, 42, -24, 42, -24, -6 )	
+[sub_resource type="Animation" id=44]
+
+length = 0.84
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.32, 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 20 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.32, 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -32, 18, -62, 28, -62, 38, 18, 18, 68, -22, 68, -22, -32 ), PoolVector2Array( -2, -52, 18, -42, 18, 48, -22, 48, -22, 48, -22, 8, -72, 18, -32, -22, -22, -42 ), PoolVector2Array( 38, -2, 18, 18, 28, 48, 88, 48, 88, 58, 28, 58, -32, 58, -22, 8, -2, -22, 28, -22 ), PoolVector2Array( 38, -12, 18, -2, 28, 28, 68, 28, 98, 38, -32, 38, -22, -12, -2, -42, 28, -42, 38, -32 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.44 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 58, -22, -62, 38, -62, 88, -12, 88, 48, 78, 58 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.44, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -32, 24, 10, 24, 52, -24, 52, -24, 10 )	
+[sub_resource type="ConvexPolygonShape2D" id=46]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -30, 24, 12, 0, 54, -24, 12 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -40, 24, 2, 0, 44, -24, 2 )
+
+[sub_resource type="Animation" id=48]
+
+length = 0.4
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "heavyAtkInAir" ],
+"method": "_stop_anim"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 8, -32, 28, -12, 28, 18, -2, 58, -32, 58, -32, -32 ), PoolVector2Array( 28, -2, 18, 38, 68, 48, 68, 58, -32, 48, -32, -12, -2, -22 ), PoolVector2Array( 28, -2, 18, 28, 68, 38, 68, 48, -32, 38, -32, 8, -22, -22, 8, -32 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 38, -42, 68, -12, 78, 28, 78, 58, 38, 58, 8, -52 ), PoolVector2Array( 38, -62, 78, -62, 78, 58, 38, 48 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=50]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -32, 22, -14, 22, 6, -24, 6, -24, -14 )	
+[sub_resource type="Animation" id=51]
+
+length = 0.4
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 47 ), ExtResource( 48 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ SubResource( 49 ), SubResource( 50 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 48, 28, 8, 48, -42, 28, -52, -22, -32, -52 ), PoolVector2Array( 38, 8, -52, 8, -52, -12, -32, -32, -12, -32 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="Animation" id=53]
+
+length = 0.04
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 49 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 52 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 38, -12, 48, -32, 18, -12, -42, 18, -42, 38, -12, 38, 8 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -36, 24, 12, 24, 60, -24, 60, -24, 12 )	
+[sub_resource type="ConvexPolygonShape2D" id=55]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=56]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -24, 24, 20, 24, 64, -24, 64, -24, 20 )	
+[sub_resource type="ConvexPolygonShape2D" id=57]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -34, 24, 30, 24, 54, -24, 54, -24, 30 )	
+[sub_resource type="ConvexPolygonShape2D" id=58]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -40, 24, 10, 24, 44, -24, 44, -24, 10 )	
+[sub_resource type="Animation" id=59]
+
+length = 0.6
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.08, 0.32 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.12 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 25 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 58, -22, 58, -22, 18, -52, 8, -52, -2, -32, -42, 28, -32 ), PoolVector2Array( 28, 48, -32, 48, -12, -32, 8, -52, 28, -32, 18, 18 ), PoolVector2Array( 18, 68, -32, 68, 8, -22, 38, -12, 38, 38 ), PoolVector2Array( 18, 58, -32, 58, -2, -12, 18, -32, 38, -22, 38, -2, 18, 28 ), PoolVector2Array( 18, 38, -32, 38, 8, -42, 38, -42, 48, -32, 38, -12, 18, 18 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.16 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 68, -52, 88, -12, 78, 18, 38, 48, 18, -72 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.16, 0.32 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.16, 0.32 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=60]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -28, 24, 16, 24, 60, -24, 60, -24, 16 )	
+[sub_resource type="ConvexPolygonShape2D" id=61]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, -4, 24, 38, -24, 38, -24, -4 )	
+[sub_resource type="ConvexPolygonShape2D" id=62]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="Animation" id=63]
+
+length = 0.52
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 58, -22, 58, -22, 28, -42, 8, -32, -22, 8, -32, 28, -22, 38, 18 ), PoolVector2Array( 28, 38, -22, 28, -22, -12, -2, -42, 28, -42, 38, -12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 118, 28, 108, 38, 68, 48, -2, 38, 58, -32, 98, -12, 118, 18 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="Animation" id=65]
+
+length = 0.44
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.2, 0.28, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:disabled")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=66]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=67]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=68]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=69]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="Animation" id=70]
+
+length = 0.72
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 0.36, 0.48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 18, 48, -22, 48, -22, -42, 8, -52, 28, -42 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=71]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=72]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=73]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -42, 24, 0, 24, 42, -24, 42, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=74]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -44, 24, 0, 24, 44, -24, 44, -24, 0 )	
+[sub_resource type="Animation" id=75]
+
+resource_name = "skill"
+length = 0.76
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "_switch_action_state"
+}, {
+"args": [ 3 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 30 ],
+"method": "_move_in_action"
+}, {
+"args": [ 30 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( -22, 48, -32, -2, -22, -22, -12, -52, 18, -52, 28, -22, 18, -2, 58, -2, 58, 8, 28, 18, 18, 48 ), PoolVector2Array( -42, 48, -12, -22, -12, -42, 18, -42, 38, -32, 38, -12, 18, -2, 28, 18, 28, 48 ), PoolVector2Array( -42, 48, -12, -22, -2, -42, 38, -42, 48, -32, 38, -2, 128, 8, 118, 18, 28, 18, 28, 48 ), PoolVector2Array( -42, 48, -22, -22, -2, -42, 28, -42, 38, -32, 38, 8, 108, -2, 108, 8, 28, 28, 28, 48 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:polygon")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.36 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 28, 18, 28, -2, 128, -2, 128, 18 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:disabled")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmsDamageDetermination_Area2D/ArmsDamageDetermination_CollisionPolygon2D:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.36, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=76]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=77]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -48, 24, 0, 24, 48, -24, 48, -24, 0 )	
+[sub_resource type="ConvexPolygonShape2D" id=78]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -46, 24, 0, 24, 46, -24, 46, -24, 0 )	
+[sub_resource type="Animation" id=79]
+
+length = 0.76
+loop = true
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 66 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( -32, 48, -32, -12, -22, -42, 8, -52, 58, 8, 58, 18, 28, 18, 28, 48 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=80]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -50, 24, 0, 24, 50, -24, 50, -24, 0 )	
+[sub_resource type="Animation" id=81]
+
+length = 0.16
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerTexture_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 47 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "_switch_action_state"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -20 ],
+"method": "_move_in_action"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerBulk_CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 80 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PlayerDamageDetermination_Area2D/PlayerDamageDetermination_CollisionPolygon2D:polygon")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ PoolVector2Array( -2, 48, -42, 28, -52, -22, -32, -52, -12, -32, 48, 28, 28, 48 ) ]
+}
+
+[node name="Player_KinematicBody2D" type="KinematicBody2D" index="0"]
+
+position = Vector2( 512, 512 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="Player_AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/afterDropping = SubResource( 3 )
+anims/beforeJumping = SubResource( 6 )
+anims/block = SubResource( 8 )
+anims/catched = SubResource( 9 )
+anims/combo1 = SubResource( 14 )
+anims/combo2 = SubResource( 18 )
+anims/combo3 = SubResource( 25 )
+anims/counterAtkPt1 = SubResource( 29 )
+anims/counterAtkPt2 = SubResource( 35 )
+anims/die = SubResource( 36 )
+anims/dropping = SubResource( 38 )
+anims/heavyAtk = SubResource( 44 )
+anims/heavyAtkInAir = SubResource( 48 )
+anims/hitHard = SubResource( 51 )
+anims/jumping = SubResource( 53 )
+anims/lightAtk = SubResource( 59 )
+anims/lightAtkInAir = SubResource( 63 )
+anims/roll = SubResource( 65 )
+anims/run = SubResource( 70 )
+anims/skill = SubResource( 75 )
+anims/stand = SubResource( 79 )
+anims/suffered = SubResource( 81 )
+blend_times = [  ]
+script = ExtResource( 78 )
+
+[node name="PlayerTexture_Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 5 )
+
+[node name="PlayerBulk_CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+shape = SubResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PlayerDamageDetermination_Area2D" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="PlayerDamageDetermination_CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDamageDetermination_Area2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 18, -42, 28, -22, 48, -22, 18, 38, -22, 48, -22, -32, -2, -52 )
+
+[node name="ArmsDamageDetermination_Area2D" type="Area2D" parent="." index="4"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="ArmsDamageDetermination_CollisionPolygon2D" type="CollisionPolygon2D" parent="ArmsDamageDetermination_Area2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 18, 58, -2, -72, 38, -62, 88, -12, 88, 18, 78, 38 )
+disabled = true
+_sections_unfolded = [ "Visibility" ]
+
+[connection signal="animation_started" from="Player_AnimationPlayer" to="." method="_on_Player_AnimationPlayer_animation_started"]
+
+
