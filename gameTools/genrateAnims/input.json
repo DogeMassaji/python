@@ -1,0 +1,8 @@
+{
+	"resources_path": "resources/textures/sc_ft/player/sword/player_sword.sprites",
+	"node_path": "Position2D/Sprite:texture",
+	"res_file_format": {
+		"prefix": "player_sword_",
+		"suffix": ".tres"
+	}
+}
